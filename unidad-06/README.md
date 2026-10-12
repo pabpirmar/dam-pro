@@ -35,3 +35,6 @@ https://codelearnacademy.github.io/java/leccion06/
 
 ## Revisión desde GitHub
 Las colecciones simplifican el tratamiento de conjuntos de datos.
+
+## Ronda de sincronización 3
+Ronda de sincronizacion 3 en equipo 1

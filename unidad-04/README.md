@@ -12,7 +12,7 @@ Diseñar y organizar aplicaciones mediante clases y paquetes.
 1. Clases y objetos.
 2. Paquetes e importaciones.
 3. Modificadores public, private y protected.
-4. Encapsulación.
+4. Encapsulación.c
 5. Constructores y composición.
 
 ## Actividad de la unidad

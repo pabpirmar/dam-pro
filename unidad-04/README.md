@@ -25,6 +25,3 @@ https://codelearnacademy.github.io/java/leccion04/
 - Responsabilidad de una clase.
 - Uso de atributos privados.
 - Composición entre objetos.
-
-## Revisión desde GitHub
-La encapsulación ayuda a mantener un diseño claro y controlado.

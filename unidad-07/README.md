@@ -34,3 +34,6 @@ https://codelearnacademy.github.io/java/leccion07/
 
 ## Revisión desde GitHub
 El polimorfismo permite trabajar con distintas implementaciones.
+
+## Ronda de sincronización 4
+Sincronizacion 4 en equipo 2

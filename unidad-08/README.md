@@ -35,3 +35,6 @@ https://codelearnacademy.github.io/java/leccion08/
 
 ## Revisión desde GitHub
 La persistencia conserva los datos más allá de la ejecución del programa.
+
+## Ronda de sincronización 5
+Sincronizacion 5 en equipo 1

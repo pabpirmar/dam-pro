@@ -26,4 +26,4 @@ https://codelearnacademy.github.io/java/leccion06/
 - Cuándo usar List, Set o Map.
 - Recorrido con for-each.
 - Filtrado mediante streams.
-  Guarda y ejecuta:
+  

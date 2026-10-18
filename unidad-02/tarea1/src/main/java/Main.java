@@ -4,8 +4,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
-        int cantidadProductos = 0;
-
+        System.out.println("====================================\n" +
+                "         TIENDA DAM-PRO\n" +
+                "====================================");
         System.out.println("Introduzca su nombre: ");
         String nombre = teclado.nextLine();
 
@@ -21,11 +22,21 @@ public class Main {
 
             System.out.println("Indique el precio del producto: ");
             float precio = teclado.nextFloat();
+            teclado.nextLine();
 
             precioTotal += precio;
 
             System.out.println("Producto guardado correctamente: " + nombreProducto + " - Precio: " + precio + " €");
+            System.out.println("El precio total es: " + precioTotal);
         }
+
+        System.out.println("====================================\n" +
+                "            TOTAL DEL TICKET\n" +
+                "====================================");
+        System.out.println("Cliente: " +nombre);
+        System.out.println("Productos comprados: " +productos);
+        System.out.println("TOTAL: " +precioTotal);
+        System.out.println("Gracias por su compra, " +nombre + ".");
 
         teclado.close();
     }

@@ -12,7 +12,7 @@ import java.util.Scanner;
          float metros = 0;
          Scanner teclado = new Scanner(System.in);
          float resultado = 0;
-
+         boolean salir = false;
 
          System.out.println("====================================\n" +
                  "         CONVERSOR DAM-PRO\n" +
@@ -20,41 +20,56 @@ import java.util.Scanner;
 
          System.out.println("Introduzca su nombre: ");
          String nombre = teclado.nextLine();
+         int totalConversiones = 0;
 
-         System.out.println("1. Kilómetros a metros");
-         System.out.println("2. Metros a centímetros");
-         System.out.println("3. Kilómetros a millas");
-         System.out.println("4. Salir");
-         System.out.println("Seleccione una opción: ");
+         while (salir == false) {
+             System.out.println("1. Kilómetros a metros");
+             System.out.println("2. Metros a centímetros");
+             System.out.println("3. Kilómetros a millas");
+             System.out.println("4. Salir");
+             System.out.println("Seleccione una opción: ");
 
-         int opcion = teclado.nextInt();
-         teclado.nextLine();
-         int contador = 0;
+             int opcion = teclado.nextInt();
+             teclado.nextLine();
+             int contador = 0;
 
-         switch (opcion) {
 
-             case 1:
-                 System.out.println("Introduzca los kilómetros: ");
-                 kilómetros = teclado.nextFloat();
-                 resultado = KilómetrosMetros(kilómetros);
-                 break;
-             case 2:
-                 System.out.println("Introduzca los metros");
-                 metros = teclado.nextFloat();
-                 resultado = MetrosCentímetros(metros);
-                 break;
-             case 3:
-                 System.out.println("Introduzca los kilómetros");
-                 kilómetros = teclado.nextFloat();
-                 resultado = KilómetrosMillas(kilómetros);
-                 break;
+             switch (opcion) {
+
+                 case 1:
+                     System.out.println("Introduzca los kilómetros: ");
+                     kilómetros = teclado.nextFloat();
+                     resultado = KilómetrosMetros(kilómetros);
+                     totalConversiones++;
+                     break;
+                 case 2:
+                     System.out.println("Introduzca los metros");
+                     metros = teclado.nextFloat();
+                     resultado = MetrosCentímetros(metros);
+                     totalConversiones++;
+                     break;
+                 case 3:
+                     System.out.println("Introduzca los kilómetros");
+                     kilómetros = teclado.nextFloat();
+                     resultado = KilómetrosMillas(kilómetros);
+                     totalConversiones++;
+                     break;
+                 case 4:
+                     salir = true;
+                     break;
+                 default:
+                     System.out.println("Opcion incorrecta");
+                     break;
+             }
+             System.out.println("El resultado es: " + resultado);
          }
-         System.out.println("El resultado es: " +resultado);
 
-
-
-
-
+         System.out.println("====================================\n" +
+                 "            CONVERSOR DAM-PRO\n" +
+                 "====================================");
+         System.out.println("Usuario: " +nombre);
+         System.out.println("Conversiones realizadas: " + totalConversiones);
+         System.out.println("Gracias por utilizar DAM-PRO.");
      }
 
      public static float KilómetrosMetros(float kilometros) {

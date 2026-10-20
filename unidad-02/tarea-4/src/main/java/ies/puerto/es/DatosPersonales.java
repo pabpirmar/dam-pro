@@ -16,6 +16,9 @@ public class DatosPersonales {
      * @return int de la edad
      */
     static int convertirEdad(String sEdad) {
+        if (sEdad == null) {
+            return 0;
+        }
         return Integer.valueOf(sEdad);
     }
 }

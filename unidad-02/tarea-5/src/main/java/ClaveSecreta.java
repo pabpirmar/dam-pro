@@ -1,41 +1,33 @@
+import java.util.Scanner;
+
 public class ClaveSecreta {
     static void main() {
-        // o O = 0
-        //i I = 2
-        // u U = 3
-        // e E = *
-        // a A = ?
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Introduzca la palabra que desea transformar en clave:");
+        String palabra = teclado.nextLine();
+        String clave = generarClaveSegura(palabra);
+        System.out.println("La clave es: " + clave);
     }
 
     /**
-     * Genera
-     * @param palabra String
+     * Remplaza las vocales por otros caracteres
+     * @param sPalabra String
      * @return String
      */
-    static String generarClaveSegura(String palabra) {
+    static String generarClaveSegura (String sPalabra) {
         String clave = "";
 
-
-        if (palabra == null || palabra.isEmpty()) {
+        if (sPalabra == null || sPalabra.isEmpty()) {
             return "";
         }
-        palabra.replace("a","?");
-        palabra.replace("A","?");
-        palabra.replace("o","0");
-        palabra.replace("O","0");
-        palabra.replace("i","2");
-        palabra.replace("I","2");
-        palabra.replace("u","3");
-        palabra.replace("U","3");
-        palabra.replace("e","*");
-        palabra.replace("E","*");
 
-        return clave;
+        sPalabra = sPalabra.replace("a", "4");
+        sPalabra = sPalabra.replace("e", "$");
+        sPalabra = sPalabra.replace("i", "1");
+        sPalabra = sPalabra.replace("o", "0");
+        sPalabra = sPalabra.replace("u", "c");
+
+        return sPalabra;
     }
-
-
-
-
-
 
 }

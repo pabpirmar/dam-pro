@@ -37,9 +37,9 @@ public class GestorCalificaciones {
     }
 
     /**
-     * Funcion que
-     * @param sNumero
-     * @return
+     * Funcion que convierte un numero en una nota
+     * @param sNumero String con el numero
+     * @return int del numero
      */
     static int convertirNumeroNotas(String sNumero) {
     int numero = 0;
@@ -52,9 +52,9 @@ public class GestorCalificaciones {
     }
 
     /**
-     *
-     * @param sNumero
-     * @return
+     * Funcion que convierte la nota
+     * @param sNumero String con el numero
+     * @return double de la nota
      */
     static double convertirNota(String sNumero) {
         double numero = 0;
@@ -67,9 +67,9 @@ public class GestorCalificaciones {
     }
 
     /**
-     *
-     * @param dNumero
-     * @return
+     * Funcion que dice si la nota es válida
+     * @param dNumero Double del numero
+     * @return boolean de la nota válida
      */
     static boolean esNotaValida(Double dNumero) {
         if (dNumero == null) {
@@ -84,6 +84,10 @@ public class GestorCalificaciones {
         return true;
     }
 
+    /**
+     * Funcion que solicita la nota válida
+     * @return Double de la nota válida
+     */
     static Double solicitarNotaValida() {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Introduce una nota:");
@@ -99,6 +103,11 @@ public class GestorCalificaciones {
         return dNumero;
     }
 
+    /**
+     * Funcion que calcula la media
+     * @param dNotas Double con la nota
+     * @return double de la media
+     */
     static double calcularMedia(List<Double> dNotas) {
         double media = 0;
         double suma = 0;
@@ -109,6 +118,11 @@ public class GestorCalificaciones {
         return media;
     }
 
+    /**
+     * Funcion que obtiene la nota maxima
+     * @param lNotas Lista de las notas
+     * @return double de la nota maxima
+     */
     static double obtenerMaxima(List<Double> lNotas) {
         double maximo = 0;
         for (int i = 0; i < lNotas.size(); i++) {
@@ -122,6 +136,11 @@ public class GestorCalificaciones {
         return maximo;
     }
 
+    /**
+     * Funcion que obtiene la nota minima
+     * @param lNotas Lista de notas
+     * @return double de la nota minima
+     */
     static double obtenerMinimo(List<Double> lNotas) {
         double minimo = 10;
         for (int i = 0; i < lNotas.size(); i++) {

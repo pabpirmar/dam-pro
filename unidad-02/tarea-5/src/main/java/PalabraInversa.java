@@ -1,6 +1,13 @@
 import java.util.Scanner;
 
+/**
+ * @author pabpirmar
+ * @version 1.0.0
+ */
 public class PalabraInversa {
+    /**
+     * Programa principal
+     */
     static void main() {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Introduce una palabra:");
@@ -27,6 +34,7 @@ public class PalabraInversa {
         }
         return resultado.toString();
     }
+
 
     static String reverse2(String sPalabra) {
         StringBuilder resultado = new StringBuilder(sPalabra);

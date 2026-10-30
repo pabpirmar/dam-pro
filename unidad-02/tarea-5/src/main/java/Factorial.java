@@ -1,6 +1,13 @@
 import java.util.Scanner;
 
+/**
+ * @author pabpirmar
+ * @version 1.0.0
+ */
 public class Factorial {
+    /**
+     * Programa principal
+     */
     static void main() {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Introduce un numero");

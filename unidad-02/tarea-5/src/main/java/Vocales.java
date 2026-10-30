@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 /**
  * @author pabpirmar
  * @version 1.0.0

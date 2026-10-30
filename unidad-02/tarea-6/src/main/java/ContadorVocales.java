@@ -30,7 +30,8 @@ public class ContadorVocales {
         for (int i = 0; i < sCadena.length(); i++) {
             char caracter = sCadena.charAt(i);
             switch (caracter) {
-                case 'a': case 'á': case 'e': case 'é': case 'i': case 'í': case 'o': case 'ó': case 'u': case 'ú':
+                case 'a': case 'á': case 'ä': case 'e': case 'é': case 'ë': case 'i': case 'í': case 'ï': case 'o':
+                    case 'ó': case 'ö':case 'u': case 'ú': case 'ü':
                     resultado = resultado +1;
             }
 
@@ -39,25 +40,4 @@ public class ContadorVocales {
         return resultado;
     }
 
-    /**
-     * Funcion2 que cuenta las vocales
-     * @param sCadena int de la cadena
-     * @return int del resultado
-     */
-    static int contarVocales2(String sCadena) {
-        if (sCadena == null || sCadena.isEmpty()) {
-            return 0;
-        }
-        int resultado = 0;
-        sCadena = sCadena.toLowerCase();
-        for (int i = 0; i < sCadena.length(); i++) {
-            char caracter = sCadena.charAt(i);
-            if (caracter == 'a' || caracter == 'á' || caracter == 'e' || caracter == 'é' || caracter == 'i' ||
-                    caracter == 'í' || caracter == 'o' || caracter == 'ó' || caracter == 'u' || caracter == 'ú') {
-                resultado = resultado +1;
-            }
-        }
-
-        return resultado;
-    }
 }

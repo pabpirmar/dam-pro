@@ -34,10 +34,7 @@ public class ContadorVocales {
                     case 'ó': case 'ö':case 'u': case 'ú': case 'ü':
                     resultado = resultado +1;
             }
-
         }
-
         return resultado;
     }
-
 }

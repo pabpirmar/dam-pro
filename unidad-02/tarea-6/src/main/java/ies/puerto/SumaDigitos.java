@@ -11,7 +11,7 @@ public class SumaDigitos {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Introduzca los numeros");
         String sNumero = teclado.nextLine();
-        double resultado = SumarDigitos(sNumero);
+        int resultado = SumarDigitos(sNumero);
         System.out.println("La suma es: "+resultado);
     }
 
@@ -24,7 +24,7 @@ public class SumaDigitos {
         if (numeros == null || numeros.isEmpty()) {
             return 0;
         }
-        double suma = 0;
+        int suma = 0;
 
         for (int i = 0; i < numeros.length(); i++) {
             char cNumero = numeros.charAt(i);

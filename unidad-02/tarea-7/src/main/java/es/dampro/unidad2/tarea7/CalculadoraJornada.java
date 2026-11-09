@@ -5,24 +5,33 @@ import java.time.format.*;
 import java.time.temporal.ChronoUnit;
 
 /**
- * TODO: Describe la finalidad de CalculadoraJornada.
+ * Clase que calcula la jornada
  *
- * @author
- * @version
+ * @author pabpirmar
+ * @version 1.0.0
  */
 public final class CalculadoraJornada {
     private CalculadoraJornada() { }
 
     /**
-     * TODO: Describe lo que hace el método.
+     * Calcula el tiempo trabajando
      *
-     * @param entrada
-     * @param salida
-     * @param descansoMinutos
-     * @return
+     * @param entrada LocalTime fecha de entrada
+     * @param salida LocalTime fecha de salida
+     * @param descansoMinutos int de descanso en minutos
+     * @return Duration formateado
      */
     public static Duration calcularTiempoTrabajado(LocalTime entrada, LocalTime salida, int descansoMinutos) {
-        // TODO: Implementa el algoritmo según el enunciado.
-        return Duration.ZERO;
+        if (!salida.isAfter(entrada)) {
+            throw new IllegalArgumentException();
+        }
+        if (descansoMinutos < 0){
+            throw new IllegalArgumentException();
+        }
+        Duration jornadaTotal = Duration.between(entrada,salida);
+        if (descansoMinutos > jornadaTotal.toMinutes()){
+            throw new IllegalArgumentException();
+        }
+        return jornadaTotal.minusMinutes(descansoMinutos);
     }
 }

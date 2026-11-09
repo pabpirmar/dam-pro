@@ -5,22 +5,26 @@ import java.time.format.*;
 import java.time.temporal.ChronoUnit;
 
 /**
- * TODO: Describe la finalidad de ValidadorFechas.
+ * Clase que valida una fecha
  *
- * @author
- * @version
+ * @author pabpirmar
+ * @version 1.0.0
  */
 public final class ValidadorFechas {
     private ValidadorFechas() { }
 
     /**
-     * TODO: Describe lo que hace el método.
+     * Comprueba si una fecha es válida
      *
-     * @param texto
-     * @return
+     * @param texto String de texto
+     * @return LocalDate formateado
      */
     public static LocalDate validarFecha(String texto) {
-        // TODO: Implementa el algoritmo según el enunciado.
-        return LocalDate.MIN;
+        if (texto == null) {
+            throw new IllegalArgumentException();
+        }
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/uuuu") .withResolverStyle(ResolverStyle.STRICT);
+        
+        return LocalDate.parse(texto, formato);
     }
 }

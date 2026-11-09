@@ -5,23 +5,22 @@ import java.time.format.*;
 import java.time.temporal.ChronoUnit;
 
 /**
- * TODO: Describe la finalidad de ConversorZonasHorarias.
+ * Clase conversor de zonas horarias
  *
- * @author
- * @version
+ * @author pabpirmar
+ * @version 1.0.0
  */
 public final class ConversorZonasHorarias {
     private ConversorZonasHorarias() { }
 
     /**
-     * TODO: Describe lo que hace el método.
+     * Convierte la hora dependiendo de la zona horaria
      *
-     * @param fechaOrigen
-     * @param zonaDestino
-     * @return
+     * @param fechaOrigen ZoneDateTime fecha de origen
+     * @param zonaDestino ZoneDateTime fecha de destino
+     * @return ZoneDateTime formateado
      */
     public static ZonedDateTime convertirZona(ZonedDateTime fechaOrigen, ZoneId zonaDestino) {
-        // TODO: Implementa el algoritmo según el enunciado.
-        return fechaOrigen;
+        return fechaOrigen.withZoneSameInstant(zonaDestino);
     }
 }

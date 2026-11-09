@@ -5,24 +5,26 @@ import java.time.format.*;
 import java.time.temporal.ChronoUnit;
 
 /**
- * TODO: Describe la finalidad de CalculadoraViaje.
+ * Clase que calcula la llegada de un viaje
  *
- * @author
- * @version
+ * @author pabpirmar
+ * @version 1.0.0
  */
 public final class CalculadoraViaje {
     private CalculadoraViaje() { }
 
     /**
-     * TODO: Describe lo que hace el método.
+     * Calcula la llegada de un viaje
      *
-     * @param salida
-     * @param horas
-     * @param minutos
-     * @return
+     * @param salida LocalDate fecha de salida
+     * @param horas Long de horas
+     * @param minutos Long de minutos
+     * @return LocalDate formateado
      */
     public static LocalDateTime calcularLlegada(LocalDateTime salida, long horas, long minutos) {
-        // TODO: Implementa el algoritmo según el enunciado.
-        return LocalDateTime.MIN;
+        if (minutos < 0 || horas <0) {
+            throw new IllegalArgumentException();
+        }
+        return salida.plusHours(horas) .plusMinutes(minutos);
     }
 }

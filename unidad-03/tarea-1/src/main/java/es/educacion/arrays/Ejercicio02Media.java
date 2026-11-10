@@ -16,7 +16,7 @@ public final class Ejercicio02Media {
     }
 
     /**
-     * Calcula la media de un array de notas
+     * Calcula la media con las notas de un array
      * @param notas int[] de notas
      * @return double con el resultado
      * @exception IllegalArgumentException

@@ -1,12 +1,33 @@
 package es.educacion.arrays;
 
-// Ejercicio 16. Devuelve un array con la suma de cada fila. Admite matriz rectangular o irregular y filas vacías. Matriz o fila nula: IllegalArgumentException.
-// TODO: escribir el Javadoc de la clase, del método, sus parámetros y retorno.
+/**
+ * Clase que suma las filas de un array
+ *
+ * @author pabpirmar
+ * @version 1.0.0
+ */
 public final class Ejercicio16SumaFilas {
     private Ejercicio16SumaFilas() { }
 
-    // Contrato: Devuelve un array con la suma de cada fila. Admite matriz rectangular o irregular y filas vacías. Matriz o fila nula: IllegalArgumentException.
+    /**
+     * Funcion que suma las filas de un array
+     * @param matriz int [] de una matriz
+     * @return int de la suma
+     */
     public static int[] sumarFilas(int[][] matriz) {
-        throw new UnsupportedOperationException("Pendiente de implementar");
+       if (matriz == null){
+           throw new IllegalArgumentException();
+       }
+        int[] sumas = new int[matriz.length];
+
+        for (int i = 0; i < matriz.length; i++) {
+            if (matriz[i] == null){
+                throw new IllegalArgumentException();
+            }
+            for (int num : matriz[i]) {
+                sumas[i] = sumas[i] + num;
+            }
+        }
+        return sumas;
     }
 }

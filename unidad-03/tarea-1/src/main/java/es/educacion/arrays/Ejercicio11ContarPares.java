@@ -5,8 +5,17 @@ package es.educacion.arrays;
 public final class Ejercicio11ContarPares {
     private Ejercicio11ContarPares() { }
 
-    // Contrato: Cuenta los elementos pares, incluidos cero y negativos. Array vacío: 0. Null: IllegalArgumentException.
+
     public static int contarPares(int[] numeros) {
-        throw new UnsupportedOperationException("Pendiente de implementar");
+        if (numeros == null) {
+            throw new IllegalArgumentException();
+        }
+        int pares = 0;
+        for (int numero:numeros) {
+            if (numero % 2 == 0) {
+                pares++;
+            }
+        }
+        return pares;
     }
 }

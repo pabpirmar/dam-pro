@@ -9,7 +9,7 @@ public final class Ejercicio15Documentar {
 
     /**
      * Funcion que cuenta la longiitud de un array
-     *
+     *s
      * @param numeros int[] de los numeros de un array
      * @return int de la longitud del array
      * @exception IllegalArgumentException si el array es nulo

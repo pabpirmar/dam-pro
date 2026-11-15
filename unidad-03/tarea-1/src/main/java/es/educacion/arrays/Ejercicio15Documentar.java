@@ -1,11 +1,19 @@
 package es.educacion.arrays;
 
-// Ejercicio 15: documentación Javadoc. Añade Javadoc descriptivo a la clase y ambos métodos.
-// Describe su finalidad y documenta cada parámetro y valor de retorno.
+/**
+ * Clase que cuenta la longitud de un array
+ *
+ */
 public final class Ejercicio15Documentar {
     private Ejercicio15Documentar() { }
 
-    // Número de elementos (un array nulo no está permitido).
+    /**
+     * Funcion que cuenta la longiitud de un array
+     *
+     * @param numeros int[] de los numeros de un array
+     * @return int de la longitud del array
+     * @exception IllegalArgumentException si el array es nulo
+     */
     public static int longitud(int[] numeros) {
         if (numeros == null) {
             throw new IllegalArgumentException("Array nulo");
@@ -13,7 +21,11 @@ public final class Ejercicio15Documentar {
         return numeros.length;
     }
 
-    // Indica si el array contiene algún elemento (un array nulo no está permitido).
+    /**
+     * Funcion que almacena un array
+     * @param numeros int[] de los numeros de un array
+     * @return int con la longitud
+     */
     public static boolean tieneElementos(int[] numeros) {
         return longitud(numeros) > 0;
     }
